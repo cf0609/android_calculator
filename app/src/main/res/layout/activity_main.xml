@@ -1,0 +1,284 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ff808080"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:id="@+id/calculator"
+    >
+    <!-- 计算器的显示框  -->
+    <EditText
+        android:text="TextView"
+        android:id="@+id/textView1"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:layout_gravity="center"
+        android:gravity="right"
+        android:cursorVisible="false"
+        android:editable = "false"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:layout_marginTop="4dip" android:layout_weight="1.5">
+    </EditText>
+
+    <!-- 键盘表 -->
+    <TableLayout
+        android:id="@+id/tablelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dip"
+        android:layout_weight="10"
+        >
+
+        <!-- 两个清除键 -->
+    <LinearLayout
+        android:id="@+id/linearlayout02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+        <Button
+            android:id="@+id/but_c"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:text = "c"
+
+            />
+        <Button
+            android:id="@+id/but_ce"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="25sp"
+            android:text="CE"
+            />
+
+        </LinearLayout>   <!-- 两个清除键 -->
+        <!-- 键盘的第一行 -->
+        <TableRow
+            android:id="@+id/row0"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/but_1"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="1"
+                android:textSize="25sp"
+
+                />
+            <Button
+            android:id="@+id/but_2"
+            android:layout_width="40dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="2"
+            android:textSize="25sp"
+
+            />
+
+            <Button
+                android:id="@+id/but_3"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="3"
+                android:textSize="25sp"
+
+                />
+
+            <Button
+                android:id="@+id/but_add"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="+"
+                android:textSize="25sp"
+
+                />
+            </TableRow>
+        <!-- 键盘第二行 -->
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/but_4"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="4"
+                android:textSize="25sp"
+
+                />
+            <Button
+                android:id="@+id/but_5"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="5"
+                android:textSize="25sp"
+
+                />
+
+            <Button
+                android:id="@+id/but_6"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="6"
+                android:textSize="25sp"
+
+                />
+
+            <Button
+                android:id="@+id/but_sub"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="-"
+                android:textSize="25sp"
+
+                />
+        </TableRow>
+
+        <!-- 第三行  -->
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/but_7"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="7"
+                android:textSize="25sp"
+
+                />
+            <Button
+                android:id="@+id/but_8"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="8"
+                android:textSize="25sp"
+
+                />
+
+            <Button
+                android:id="@+id/but_9"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="9"
+                android:textSize="25sp"
+
+                />
+
+            <Button
+                android:id="@+id/but_mul"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="*"
+                android:textSize="25sp"
+
+                />
+        </TableRow>
+    <!-- 第四行 -->
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/but_0"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="0"
+                android:textSize="25sp"
+
+                />
+            <Button
+                android:id="@+id/but_dot"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="."
+                android:textSize="25sp"
+
+                />
+
+            <Button
+                android:id="@+id/but_equ"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="="
+                android:textSize="25sp"
+
+                />
+
+            <Button
+                android:id="@+id/but_div"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="/"
+                android:textSize="25sp"
+
+                />
+        </TableRow>
+
+        <!--第五行-->
+        <LinearLayout
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/np"
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:text="+/-"
+                />
+            <Button
+                android:id="@+id/pf"
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:text="x²"
+                />
+            <Button
+                android:id="@+id/kf"
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:text="√x"
+                />
+        </LinearLayout>
+        </TableLayout>
+
+
+</LinearLayout>
