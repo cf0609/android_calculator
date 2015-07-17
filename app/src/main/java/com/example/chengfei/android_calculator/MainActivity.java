@@ -436,10 +436,33 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-        /* 正负 */
+        /* 正负
+        * 				if(vi!=fuhao[5]&&str!=""){
+					char ch=str.charAt(0);
+					if(ch=='-')
+						str=str.replace("-","");
+					else
+						str="-"+str;
+					et.setText(str);
+				}
+        * */
         symbol[8].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(vi != symbol[8] && str !="")
+                {
+                    char ch = str.charAt(0);
+                    if(ch == '-')
+                    {
+                        str = str.replace("-","");
+                    }
+                    else
+                    {
+                        str = "-" + str;
+
+                    }
+                    et.setText(str);
+                }
 
             }
         });
@@ -448,6 +471,12 @@ public class MainActivity extends ActionBarActivity {
         symbol[9].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(str != "")
+                {
+                    double m = Double.parseDouble(str);
+                    str = "" + m * m;
+                    et.setText(str);
+                }
 
             }
         });
@@ -456,7 +485,12 @@ public class MainActivity extends ActionBarActivity {
         symbol[10].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if(str != "")
+                {
+                    double m = Double.parseDouble(str);
+                    str = Math.sqrt(m) + "";
+                    et.setText(str);
+                }
             }
         });
 
@@ -488,7 +522,6 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     /* 计算方法 */
     public double calculater()
     {
@@ -502,7 +535,7 @@ public class MainActivity extends ActionBarActivity {
 
         b=f;
         c=0;
-        
+
         return f;
     }
 
